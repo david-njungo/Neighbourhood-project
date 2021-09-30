@@ -5,7 +5,7 @@ class NeighhoodTestClass(TestCase):
 
     # Set up method
     def setUp(self):
-        self.berkley = Neighhood(hoodname= 'Berkleyhood',location ='WestCoast',occupantscount =30)
+        self.berkley = Neighhood(neighbourhood_name= 'Berkleyhood',location ='WestCoast',occupantscount =30)
 
     # Testing  instance
     def test_instance(self):
