@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Neighhood,Business,Profile
 from django.contrib.auth.decorators import login_required
+from .forms import ProfileForm
 # Create your views here.
 
 def home(request):
