@@ -10,8 +10,11 @@ class Neighhood(models.Model):
         return self.hoodname
     class Meta:
         ordering = ['hoodname'] 
-        
-    def save_neighhood(self):
+
+    def save_hood(self):
         self.save() 
 
-   
+    # @classmethod  
+    # def get_project(cls):
+    #     projects = cls.objects.all()
+    #     return projects
