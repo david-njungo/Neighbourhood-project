@@ -10,5 +10,8 @@ class Neighhood(models.Model):
         return self.hoodname
     class Meta:
         ordering = ['hoodname'] 
+        
+    def save_neighhood(self):
+        self.save() 
 
    
