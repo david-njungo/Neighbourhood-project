@@ -19,3 +19,7 @@ class NeighhoodTestClass(TestCase):
 
     def tearDown(self):
         Neighhood.objects.all().delete()
+
+    def test_get_hoods(self):
+        get_hoods= Projects.get_hood()
+        self.assertTrue(len(get_hoods)==0)
