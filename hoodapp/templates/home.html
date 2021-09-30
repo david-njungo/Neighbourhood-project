@@ -13,4 +13,24 @@
     </div>
     <div class="col-3"></div>
 </div>
+<div class="hoods">
+    <h1 class="text-center text-dark fw-bold">Neeighbourhoods</h1>
+    {% for hood in hoods %}
+    <div class="row">
+        <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="card" style="width: 18rem;">
+                <img src="{{hood.image.url}}" class="img-responsive" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name:{{hood.neighbourhood_name}}</h5>
+                    <p class="card-text">Location:{{hood.location}}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% empty %}
+<div class="row">
+    <h2 class="text-center">There No Projects</h2>
+</div>
+{% endfor %}
 {% endblock %}

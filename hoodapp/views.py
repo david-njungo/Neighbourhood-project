@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def home(request):
-
-    return render(request, 'home.html')
+    hoods = Neighhood.objects.all()
+    return render(request, 'home.html',{"hoods" : hoods})
 
 @login_required(login_url='/accounts/login/')
 def search_results(request):
