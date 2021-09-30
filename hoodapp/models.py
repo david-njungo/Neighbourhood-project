@@ -7,7 +7,7 @@ class Neighhood(models.Model):
     neighbourhood_name = models.CharField(max_length =30)
     location = models.CharField(max_length =30)
     occupantscount = models.IntegerField(null=True, blank=True)
-    admin = models.OneToOneField(User, on_delete=models.CASCADE)
+    
 
     def __str__(self):
         return self. neighbourhood_name

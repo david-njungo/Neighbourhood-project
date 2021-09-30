@@ -19,6 +19,8 @@ class NeighhoodTestClass(TestCase):
 
     def tearDown(self):
         Neighhood.objects.all().delete()
+        Business.objects.all().delete()
+        Profile.objects.all().delete()
 
     def test_get_hoods(self):
         get_hoods= Projects.get_hood()
