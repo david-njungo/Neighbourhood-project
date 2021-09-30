@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from .models import Neighhood,Business,Profile
+from django.contrib.auth.decorators import login_required.
 # Create your views here.
 
 def home(request):
 
     return render(request, 'home.html')
 
+@login_required(login_url='/accounts/login/')
 def search_results(request):
 
     if 'business' in request.GET and request.GET["business"]:
