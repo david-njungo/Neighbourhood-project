@@ -23,7 +23,6 @@ SECRET_KEY='django-insecure-vn*k0-da6jd#ax=arlsue8r0+cnejwn@qw_fesk14tm@$f)tdb'
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 MODE=config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 if config('MODE')=="dev":
