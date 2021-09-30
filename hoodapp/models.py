@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Neighhood(models.Model):
+    image = models.ImageField(upload_to = 'hoods/')
     neighbourhood_name = models.CharField(max_length =30)
     location = models.CharField(max_length =30)
     occupantscount = models.IntegerField(null=True, blank=True)
@@ -20,7 +21,7 @@ class Neighhood(models.Model):
     def get_hood(cls):
         hoods = cls.objects.all()
         return hoods
-        
+
 class Profile(models.Model):
     user_name = models.CharField(max_length=150,blank=True)
     Neighbourhood = models.ForeignKey('Neighhood',on_delete=models.CASCADE)
