@@ -16,10 +16,11 @@ class Neighhood(models.Model):
     def save_hood(self):
         self.save() 
 
-    # @classmethod  
-    # def get_project(cls):
-    #     projects = cls.objects.all()
-    #     return projects
+    @classmethod  
+    def get_hood(cls):
+        hoods = cls.objects.all()
+        return hoods
+        
 class Profile(models.Model):
     user_name = models.CharField(max_length=150,blank=True)
     Neighbourhood = models.ForeignKey('Neighhood',on_delete=models.CASCADE)
