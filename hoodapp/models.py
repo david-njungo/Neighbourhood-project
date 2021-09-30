@@ -34,4 +34,8 @@ class Business(models.Model):
     business_emailaddress = models.EmailField()
     admin = models.ForeignKey('User', on_delete=models.CASCADE))
     Neighbourhood = models.ForeignKey('Neighhood',on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.business_name
+
     
